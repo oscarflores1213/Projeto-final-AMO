@@ -1,0 +1,151 @@
+openapi: '3.0.2'
+info:
+  title: API Galeria de Carros @totidiversidad
+  description: API encarregada de gerenciar as informações do stock uma loja de venda de carros. 
+  version: '1.0'
+servers:
+  - url: http://localhost:5000
+
+paths:  # <!--- Rutas 
+  /read:
+    get:
+      description: 'Le todos os registros dos carros'
+      parameters: []
+      responses:
+        '200':
+          description: OK
+
+  /read/{id}:
+    get:
+      description: 'Le o registro pelo id como exemplo'
+      parameters: 
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: 'Le ID'
+      responses:
+        '200':
+          description: OK
+
+  /{id}:
+    delete:
+      description: 'Deleta o item pelo id'
+      parameters: 
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: 'Deleta ID'
+      responses:
+        '202':
+          description: ACCEPTED
+
+  /create:
+    post:
+      description: 'Crea cadastro de carro'
+      requestBody: 
+        required: true
+        content: 
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/carros'
+              type: object
+              properties:
+                marca:
+                  description: Informação da marca do carro para venda
+                  type: string
+                modelo:          
+                  type: string
+                  description: Informação do modelo do carro para venda
+                km:
+                  type: number
+                  description: Quantidade de kilometros percorridos pelo carro
+                ano:
+                  type: number
+                  description: Informação do ano do modelo do carro
+                cor:
+                  type: string
+                  description: Cor do carro
+                cambio:
+                  type: string
+                  description: Tipo de cambio do carro
+                valor:    
+                  type: number
+                  description: Preço do carro para venda
+              required:
+                - marca
+      responses:
+        '200':
+          description: (OK) Informações guardadas
+          content:
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/carros'
+
+  /atua/{id}: # cambie esta ruta porque no puede ser igual a la de deletar hay que cambiarlo en el archivoindex.js
+    put:
+      description: 'Atualizar'
+      parameters: 
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: 'Atualizar ID'
+      requestBody: 
+        content:
+          application/json: 
+            schema: 
+              $ref: '#/components/schemas/carros'
+      responses:
+        '200':
+          description: (OK) Carro atualizado
+          content:
+            application/json: 
+              schema: 
+                $ref: '#/components/schemas/carrosresponse'
+
+               
+components: 
+  schemas:
+    carros:
+      type: object
+      properties:
+        marca:
+          type: string
+        modelo:          # <!--- form field name
+          type: string
+        km:
+          type: number
+        ano:
+          type: number
+        cor:
+          type: string
+        cambio:
+          type: string
+        valor:    
+          type: number
+    carrosresponse:
+      type: object
+      properties:
+        marca:
+          type: string
+        modelo:          # <!--- form field name
+          type: string
+        km:
+          type: number
+        ano:
+          type: number
+        cor:
+          type: number
+        cambio:
+          type: number
+        valor:    
+          type: number
+        _id:
+          type: string
+        __v:
+          type: number

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+          integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+    <link rel="stylesheet"
+          href="style2.css">
+
+</head>
+<body>
+    <header>
+
+        <nav class="upMenu">
+            <div class="container">
+                <ul>
+                    <li><a class="link" href="/galery.html"> Carros disponiveis </a></li>
+                    <li><a class="link" href="/cadastro.html"> Cadastro de carros </a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    
+<div class="titleCadastro1">
+    <h2 class="titleCadastro">Cadastro veículo</h2>
+</div>
+
+
+
+    <div class="cadas">
+           <div><form class="formularioCadas" id="form">
+                <label for="marca">Marca:</label><br>
+                <select default= "" type="text" id="marca" name="marca" class="marca" required>
+                    <option class="option" value="Renault">Renault</option>
+                    <option class="option" value="Volkswagen">Volkswagen</option>
+                    <option class="option" value="Toyota">Toyota</option>
+                    <option class="option" value="Chevrolet">Chevrolet</option>
+                    <option class="option" value="Fiat">Fiat</option>
+                    <option class="option" value="Hyundai">Hyundai</option>
+                    <option class="option" value="Ford">Ford</option>
+                    <option class="option" value="Honda">Honda</option>
+                    <option class="option" value="Volvo">Volvo</option>
+                </select><br>
+                <label for="modelo">Modelo:</label><br>
+                <input type="text" id="modelo" name="marca" class="marca" required><br>
+                <label for="km">km:</label><br>
+                <input type="text" id="km" name="marca" class="marca" required><br>
+                <label for="ano">Ano:</label><br>
+                <input type="text" id="ano" name="marca" class="marca" required><br>
+                <label for="cor">Cor:</label><br>
+                <input type="text" id="cor" name="marca" class="marca" required><br>
+                <label for="cambio">Câmbio:</label><br>
+                <input type="text" id="cambio" name="marca" class="marca" required><br>
+                <label for="valor">Valor:</label><br>
+                <input type="text" id="valor" name="valor" class="marca" required><br>
+                <input class= "form-submit-button-cadas" type="submit" value="Enviar" onclick="createVeiculo()" href="/deletado.html">
+                </form>
+            </div> 
+    </div>
+
+   
+<script src="cadastro.js"></script>      
+</body>
+
+</html>

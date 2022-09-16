@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+          integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+    <link rel="stylesheet"
+          href="style2.css">
+
+</head>
+<body>
+    <header>
+
+        <nav class="upMenu">
+            <div class="container">
+                <ul>
+                    <li><a href="/index.html"> Home </a></li>
+                    <li><a href="/galery.html"> Carros disponiveis </a></li>
+                    <li><a href="/cadastro.html"> Cadastro de carros </a></li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    
+<div class="projetos">
+    <h2 class="titleProjetos">Atualizar item</h2>
+</div>
+
+
+<div class="grid-container">
+    <div class="grid-item1"><article class="card">
+        <span id= "value" class="valor1"> R$ 22222222</span>
+        <img id= "foto" src="" 
+                 alt=""
+                 class="card__imagem"
+                 width="100%"><!-- desde API-->
+        <div class="card__info">
+            <span id="marca" class="card__title">Projeto1</span>
+            <p id="descripcao" class="card__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+                consectetur sagittis faucibus. Proin convallis ac ante id convallis. Ut hendrerit turpis eu
+                molestie tincidunt. Proin
+                vel semeget magna congue bibendum vitae eu nislAA.</p>
+            <span class="button">
+                <a class="card__botao11"
+                   href="/deletado.html"> Deletar </a>
+            </span>
+    </article>
+</div>
+
+    <div class="grid-item2">
+           <div><form class="formulario" action="/action_page.php">
+                <label for="fname">Valor:</label><br>
+                <input type="text" id="fname" name="fname" value=""><br>
+                <label for="lname">titulo:</label><br>
+                <input type="text" id="lname" name="lname" value=""><br><br>
+                <p>Descripção:</p>
+                <textarea name="message" rows="10" cols="30"> </textarea><br><br>
+                    
+                <input class= "form-submit-button" type="submit" value="Enviar">
+                </form>
+            </div> 
+    </div>
+      
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
