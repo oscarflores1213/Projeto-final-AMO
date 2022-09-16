@@ -6,6 +6,6 @@ Projeto de controle de stock de empresa de venta de veiculos, com vinculação e
 
 # iniciando  o projeto 
 
-npm install
-npm run start
+-  `npm install`
+-  `npm run start`
 
