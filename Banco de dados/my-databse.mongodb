@@ -1,0 +1,98 @@
+// MongoDB Playground
+// Use Ctrl+Space inside a snippet or a string literal to trigger completions.
+
+const database = 'Banquito';
+const collection = 'veiculito';
+
+// The current database to use.
+use(database);
+
+// Create a new collection.
+db.createCollection(collection);
+
+use('Banquito')
+
+db.veiculito.insertMany([
+
+  {Marca:'Chevrolet',
+  Modelo:'Onix 1.4 LTZ SPE/4',
+  KM:'38.000',
+  Ano:'2016/2017',
+  Cor:'Prata',
+  Cambio:'Automatico',
+  Valor:'49.900,00'
+  },
+
+  {Marca:'Honda',
+  Modelo:'HR-V 1.8 EXL CVT',
+  KM:'23.000',
+  Ano:'2020/2020',
+  Cor:'Cinza',
+  Cambio:'Automatico',
+  Valor:'R$49.900,00'},
+
+  {Marca:'Toyota Corolla',
+  Modelo:'Sedan 2.0 Dual VVT-i XEI',
+  KM:'111.906',
+  Ano:'2013/2014',
+  Cor:'Prata',
+  Cambio:'Automatico',
+  Valor:'R$62.900,00'},
+
+  {Marca:'Renault',
+  Modelo:'Duster Oroch 2.0 16V Dynamique',
+  KM:'124.000',
+  Ano:'2018/2019',
+  Cor:'Prata',
+  Câmbio:'Automatico',
+  Valor:'R$85.900,00'},
+
+  {Marca:'Volkswagen',
+  Modelo:'Amarok 2.0 CD 4x4 TDi Highline Ultimate',
+  KM:'98.168',
+  Ano:'2017/2017',
+  Cor:'Preto',
+  Câmbio:'Automatico',
+  Valor:'R$47.800,00'},
+
+  {Marca:'Ford Sport',
+  Modelo:'Ecosport XLT 2.0 16V',
+  KM:'94.000',
+  Ano:'2008/2009',
+  Cor:'Preto',
+  Câmbio:'Automatico',
+  Valor:'R$38.990,00'},
+]);
+
+
+
+// The prototype form to create a regular collection:
+/* db.createCollection( <name>,
+  {
+    capped: <boolean>,
+    autoIndexId: <boolean>,
+    size: <number>,
+    max: <number>,
+    storageEngine: <document>,
+    validator: <document>,
+    validationLevel: <string>,
+    validationAction: <string>,
+    indexOptionDefaults: <document>,
+    viewOn: <string>,
+    pipeline: <pipeline>,
+    collation: <document>,
+    writeConcern: <document>
+  }
+) */
+
+// The prototype form to create a time-series collection:
+/* db.createCollection( <name>,
+  {
+    timeseries: {
+      timeField: <string>,
+      metaField: <string>,
+      granularity: <string>
+    },
+    expireAfterSeconds: <number>
+  }
+) */
